@@ -12,7 +12,7 @@
    <!--<< Title >>-->
    <title>Rudra | PortFolio</title>
    <!--<< Favcion >>-->
-   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+   <link rel="shortcut icon" href="./favicon.ico">
    <!--<< Bootstrap min.css >>-->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    <!--<< Aos animation css >>-->
@@ -57,26 +57,27 @@
                      Work
                   </a>
                </li>
+
                <li>
-                  <a href="#sers">
-                     Services
+                  <a href="#skills">
+                     Skills
                   </a>
                </li>
                <li>
-                  <a href="#testi">
-                     Testimonial
+                  <a href="#experience">
+                     Experience
                   </a>
                </li>
-               <li>
-                  <a href="#blogs">
-                     Blog 
+                              <li>
+                  <a href="#edu">
+                     Education
                   </a>
                </li>
-               <li>
+               <!-- <li>
                   <a href="#fott">
                      Contact Us
                   </a>
-               </li>
+               </li> -->
             </ul>
             <div class="menu__components d-flex align-items-center">
                <a href="#fott" class="d-flex fw-500 cmn--btn align-items-center gap-2">
@@ -97,7 +98,7 @@
       </div>
    </header>
    <!--<< Header v-1 >>-->
-   <div class="container position-relative z-1">
+   <div class="container position-relative z-1" id="Home">
       <div class="row g-4">
          <div class="col-lg-8">
             <div class="banner__content">
@@ -117,18 +118,18 @@
                      </span>
                      <i class="bi bi-arrow-up-right"></i>
                   </a>
-                  <a href="assets/img/about/about.jpg" class="bn__currently base d-inline-flex gap-2 align-items-center">
-                     <span class="d-block">
-                        Download CV
-                     </span>
-                     <i class="bi bi-arrow-up-right"></i>
-                  </a>
+                 <a href="./RudranarayanRoul_Fullstack_Developer_2025.pdf"
+   class="bn__currently base d-inline-flex gap-2 align-items-center"
+   download="RudranarayanRoul_Fullstack_Developer_2025.pdf">
+  <span class="d-block">Download CV</span>
+  <i class="bi bi-arrow-up-right"></i>
+</a>
                </div>
                <div class="d-flex gap-xxl-6 gap-xl-4 gap-4">
                   <div class="video__area">
                      <img src="assets/img/banner/bn-arrow.png" class="vid__arrow" alt="img">
-                     <a href="https://www.youtube.com/watch?v=zFuJgOiUEso&amp;ab_channel=SujithRajendran" class="video__80 video-btn">
-                        <i class="bi bi-play-fill"></i>
+                     <a onclick="openModal()" class="video__80 video-btn" style="cursor: pointer;">
+                        <i class="bi bi-file-earmark-text"></i>
                      </a>
                   </div>
                </div>
@@ -136,12 +137,12 @@
          </div>
          <div class="col-lg-4">
             <div class="banner__thumb" data-aos="fade-up-right" data-aos-duration="300">
-               <img src="./copy.png" alt="man-img">
+               <img style="z-index: 98 !important;" src="./copy.png" alt="man-img">
             </div>
          </div>
       </div>
    </div>
-   <div class="banner__rightinfo">
+   <div class="banner__rightinfo" style="z-index: 99 !important;" >
       <div class="right__infoscroll">
          <a href="#0" class="scroll">
             Follow Me
@@ -152,26 +153,36 @@
       </div>
       <div class="banner__xlsocial">
          <ul class="banner__soc d-grid justify-content-center">
-            <li>
+            <!-- <li>
                <a href="#0" class="pra fw-400">
                   FB
                </a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                <a href="#0" class="pra fw-400">
                   TW
                </a>
-            </li>
-            <li>
-               <a href="#0" class="pra fw-400">
-                  IN
+            </li> -->
+
+                      <li  style="margin-left: -3px;">
+               <a href="https://github.com/Rudra267" class="pra fw-400">
+                  <img width="38px" src="./github.png" alt="">
                </a>
             </li>
-            <li>
-               <a href="#0" class="pra fw-400">
-                  LN
+
+                        <li>
+               <a href="https://www.linkedin.com/in/rudranarayan-r-99a893248/" class="pra fw-400">
+                  <img width="32px" src="./linkdin.png" alt="">
                </a>
             </li>
+
+  
+            <li style="margin-left: 2px;">
+               <a href="https://www.instagram.com/_________rudra___/" class="pra fw-400">
+                  <img width="28px" src="./insta.png" alt="">
+               </a>
+            </li>
+
          </ul>
       </div>
    </div>
@@ -179,6 +190,8 @@
    <img src="assets/img/about/ellip.png" alt="img" class="ellip2">
 </section>
 <!--<< banner >>-->
+
+<div id="pdfContainer"></div>
 
 <!--<< text slide v1 >>-->
 <div class="marquee-wrapper footermarque text-slider">
@@ -338,7 +351,7 @@ Full Stack Developer with 2+ years of experience developing scalable and high-pe
                      </span>
                   </a>
                   <div class="custom__hover" >
-                     <a href="protfolio-details.html" class="hover__circle mauto" data-aos="zoom-out-down" data-aos-duration="2000">
+                     <a href="#contactForm" class="hover__circle mauto" data-aos="zoom-out-down" data-aos-duration="2000">
                         <span class="box">
                            <i class="bi bi-arrow-up-right"></i>
                            <span class="textmore"> 
@@ -358,15 +371,15 @@ Full Stack Developer with 2+ years of experience developing scalable and high-pe
 <!--<< about personal >>-->
 
 <!--<< exprience personal >>-->
-<div class="exprience-sections about__v1wrap pb-120 overflow-hidden position-relative">
+<div class=" about__v1wrap pb-120 overflow-hidden position-relative" id="skills">
    <div class="mb-5">
       <h5 class="head-text2 position-relative z-1">
          Take a look
       </h5>
-      <div class="row g-4 align-items-lg-start align-items-center">
-         <div class="col-lg-5">
+      <div class="row align-items-lg-start align-items-center">
+         <div class="col-lg-5" style="margin-top: 15%;">
             <div class="about__onethumb" data-aos="zoom-out-down" data-aos-duration="2000">
-               <img src="assets/img/about/skill.png" alt="img">
+               <img class="play" src="assets/img/about/skill.png" style="scale: 1.1;" alt="img">
             </div>
          </div>
          <div class="col-lg-7">
@@ -374,132 +387,513 @@ Full Stack Developer with 2+ years of experience developing scalable and high-pe
                <h2>
                   My Skills
                </h2>
-               <!-- <p>
+               <p>
 Expertise in building secure RESTful APIs, XML/JSON Web Services, OAuth-based
-authentication, and payment gateway integration, with a strong focus on performance optimization and
-SEO.               </p> -->
+authentication, and payment gateway integration, with a strong focus on responsive UI design and development.</p>
                <div class="exprience__box mt-30">
                   <div class="row g-3">
-                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="500">
-                        <div class="exri__item exri__item2">
-                           <a href="#0" class="fz-18 fw-500 base ex-iconbox">
-                              <img src="assets/img/cart/php.png" alt="img">
-                           </a>
+                                          <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="1300">
+                        <div class="exri__item exri__item2 exri__item-box">
+                          
+                              <img src="assets/img/cart/react.png" alt="img">
+                     
                            <div class="expri__cont">
                               <h4 class="mb-1 text-white">
-                                 PHP Lavavel
+                                 React
                               </h4>
-                              <div class="consulting-progress">
-                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:90%">90%</span>
-                                  <div class="progress">
-                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
-                                          role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                                          aria-valuemax="100"></div>
-                                  </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="700">
-                        <div class="exri__item exri__item2">
-                           <a href="#0" class="fz-18 fw-500 base ex-iconbox">
-                              <img src="assets/img/cart/figma.png" alt="img">
-                           </a>
-                           <div class="expri__cont">
-                              <h4 class="mb-1 text-white">
-                                 Figma
-                              </h4>
-                              <div class="consulting-progress">
-                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:50%">50%</span>
-                                  <div class="progress">
-                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
-                                          role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0"
-                                          aria-valuemax="100"></div>
-                                  </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
-                        <div class="exri__item exri__item2">
-                           <a href="#0" class="fz-18 fw-500 base ex-iconbox">
-                              <img src="assets/img/cart/photo.png" alt="img">
-                           </a>
-                           <div class="expri__cont">
-                              <h4 class="mb-1 text-white">
-                                 Photoshop
-                              </h4>
-                              <div class="consulting-progress">
-                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
-                                  <div class="progress">
-                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
-                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
-                                          aria-valuemax="100"></div>
-                                  </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="1300">
-                        <div class="exri__item exri__item2">
-                           <a href="#0" class="fz-18 fw-500 base ex-iconbox">
-                              <img src="assets/img/cart/html.png" alt="img">
-                           </a>
-                           <div class="expri__cont">
-                              <h4 class="mb-1 text-white">
-                                 HTML 5
-                              </h4>
-                              <div class="consulting-progress">
+                              <!-- <div class="consulting-progress">
                                  <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:85%">85%</span>
                                   <div class="progress">
                                       <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
                                           role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
                                           aria-valuemax="100"></div>
                                   </div>
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                      </div>
-                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="1800">
-                        <div class="exri__item exri__item2">
-                           <a href="#0" class="fz-18 fw-500 base ex-iconbox">
-                              <img src="assets/img/cart/wordpress.png" alt="img">
-                           </a>
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="500">
+                        <div class="exri__item exri__item2 exri__item-box">
+                          
+                              <img src="assets/img/cart/next.png" alt="img" style="filter: invert(1); margin-left: 5px !important;">
+                           
                            <div class="expri__cont">
                               <h4 class="mb-1 text-white">
-                                 Wordpress
+                                 Next
                               </h4>
-                              <div class="consulting-progress">
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:90%">90%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="700">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/angular.png" alt="img" style="margin-left: 16px;">
+                       
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Angular
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:50%">50%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/redux.png" alt="img">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Redux
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="1800">
+                        <div class="exri__item exri__item2 exri__item-box">
+                        
+                              <img src="assets/img/cart/tailwind.png" alt="img" style="margin: 10px 0 0 20px;">
+                          
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white" style="padding-top: 10px;">
+                                 Tailwind
+                              </h4>
+                              <!-- <div class="consulting-progress">
                                  <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:35%">35%</span>
                                   <div class="progress">
                                       <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
                                           role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0"
                                           aria-valuemax="100"></div>
                                   </div>
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                      </div>
+
+                                          <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/node.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Node
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                                          <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/Redis.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Redis
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/laravel.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Laravel
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/vue.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 vue
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
                      <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="2000">
-                        <div class="exri__item exri__item2">
-                           <a href="#0" class="fz-18 fw-500 base ex-iconbox">
+                        <div class="exri__item exri__item2 exri__item-box">
+                         
                               <img src="assets/img/cart/python.png" alt="img">
-                           </a>
+                      
                            <div class="expri__cont">
                               <h4 class="mb-1 text-white">
                                  Python
                               </h4>
-                              <div class="consulting-progress">
+                              <!-- <div class="consulting-progress">
                                  <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:42%">42%</span>
                                   <div class="progress">
                                       <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
                                           role="progressbar" style="width: 42%;" aria-valuenow="42" aria-valuemin="0"
                                           aria-valuemax="100"></div>
                                   </div>
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                      </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/bootstrap.png" alt="img" style="margin: 10px 0 0 25px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Bootstrap
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/materialUI.png" alt="img" style="margin: 10px 0 0 25px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Material UI
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/GSAP.png" alt="img">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 GSAP
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/jwt.png" alt="img" style="margin: 0px 0 0 5px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 JWT
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/mongoDB.png" alt="img" style="margin: 0px 0 0 20px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 MongoDB
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/mysql.png" alt="img" style="margin: 0px 0 0 20px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 MySQL
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/postgred.png" alt="img" style="margin: 0px 0 0 30px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 PostgreSQL
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/typescript.png" alt="img" style="margin: 10px 0 0px 25px; scale: 1.1;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 TypeScript
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/Postman.png" alt="img" style="margin: 0px 0 0px 15px; scale: 1.1;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Postman
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/swagger.png" alt="img" style="margin: 0px 0 0px 18px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Swagger
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/JUnit.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 JUnit
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                                          <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/aws.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 AWS
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                                          <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/github.png" alt="img" style="margin: 0px 0 0px 10px;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Git
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="exri__item exri__item2 exri__item-box">
+                           
+                              <img src="assets/img/cart/docker.png" alt="img" style="margin: 0px 0 0px 10px; scale: 1.5;">
+                           
+                           <div class="expri__cont">
+                              <h4 class="mb-1 text-white">
+                                 Docker
+                              </h4>
+                              <!-- <div class="consulting-progress">
+                                 <span class="cons text-end d-flex align-items-center justify-content-end mb-2" style="left:70%">70%</span>
+                                  <div class="progress">
+                                      <div class="progress-bar wow slideInLeft" data-wow-duration=".8s"
+                                          role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                          aria-valuemax="100"></div>
+                                  </div>
+                              </div> -->
+                           </div>
+                        </div>
+                     </div>
+
+
                   </div>
                </div>
             </div>
@@ -512,7 +906,7 @@ SEO.               </p> -->
 <!--<< exprience personal >>-->
 
 <!--<< exprience v2 personal >>-->
-<div class="exprience2-sections bg1-img pb-80 pt-80 overflow-hidden position-relative">
+<div class="exprience2-sections bg1-img pb-80 pt-80 overflow-hidden position-relative" id="experience">
    <div class="container">
       <div class="g">
          <h5 class="head-text mtitle">
@@ -602,7 +996,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
  <!--<< text slide v1 >>-->
 
 <!--<< customizable personal >>-->
-<div class="about-sections bg1-img2 pt-120 pb-120 overflow-hidden">
+<div class="about-sections bg1-img2 pt-120 pb-120 overflow-hidden" id="edu">
    <div class="container">
       <div class="row g-4 align-items-center">
          <div class="col-lg-12">
@@ -616,7 +1010,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                         <div class="aria-edubox">
                            <div class="expri__cont">
                               <h4 class="mb-15 mtitle">
-                                 Software Development
+                                 Master's in Computer Applications
                               </h4>
                               <p class="fz-18 mtitle d-block">
                                  Chandigarh University
@@ -876,7 +1270,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                          Subhan Bakery
                                        </h3>
                                     </a>
-                                    <a href="https://subhan-bakery-site.vercel.app/" class="common__icon imgc">
+                                    <a href="https://subhan-bakery-site.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -897,7 +1291,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Elegance Skincare
                                        </h3>
                                     </a>
-                                    <a href="https://elegance-skin-and-hair-clinic.vercel.app/" class="common__icon imgc">
+                                    <a href="https://elegance-skin-and-hair-clinic.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -911,7 +1305,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                               <div class="thumb position-relative">
                                  <img src="images/Landing/9.png" alt="img">
                                  <div class="content d-flex align-items-center justify-content-between gap-2">
-                                    <a href="https://istreecare.vercel.app/" class="left__cont">
+                                    <a href="https://istreecare.vercel.app/" class="left__cont" target="_blank">
                                        <span class="base mb-2 mb-xxl-3 d-block text-uppercase">
                                           Design & Development
                                        </span>
@@ -919,7 +1313,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Istreecare
                                        </h3>
                                     </a>
-                                    <a href="https://istreecare.vercel.app/" class="common__icon imgc">
+                                    <a href="https://istreecare.vercel.app/" class="common__icon">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -942,7 +1336,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Brand Identity & Motion Design
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro6.png" class="common__icon imgc">
+                                    <a href="assets/img/project/pro6.png" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -964,7 +1358,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                          Teasty Route
                                        </h3>
                                     </a>
-                                    <a href="https://github.com/Rudra267/MERN-Testy-Route" class="common__icon imgc">
+                                    <a href="https://github.com/Rudra267/MERN-Testy-Route" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -985,7 +1379,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           CozyStay
                                        </h3>
                                     </a>
-                                    <a href="https://github.com/Rudra267/CozyStay" class="common__icon imgc">
+                                    <a href="https://github.com/Rudra267/CozyStay" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1010,7 +1404,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Graphics
                                        </h3>
                                     </a>
-                                    <a class="common__icon imgc">
+                                    <a class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1032,7 +1426,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Creative Graphics Design
                                        </h3>
                                     </a>
-                                    <a  class="common__icon imgc">
+                                    <a  class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1053,7 +1447,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Poster Design
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro2.png" class="common__icon imgc">
+                                    <a href="assets/img/project/pro2.png" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1079,7 +1473,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                          Subhan Bakery
                                        </h3>
                                     </a>
-                                    <a href="https://subhan-bakery-site.vercel.app/" class="common__icon imgc">
+                                    <a href="https://subhan-bakery-site.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1100,7 +1494,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Elegance Skincare
                                        </h3>
                                     </a>
-                                    <a href="https://elegance-skin-and-hair-clinic.vercel.app/" class="common__icon imgc">
+                                    <a href="https://elegance-skin-and-hair-clinic.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1121,7 +1515,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Ashra Bussiness
                                        </h3>
                                     </a>
-                                    <a href="https://ashra-three.vercel.app/" class="common__icon imgc">
+                                    <a href="https://ashra-three.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1143,7 +1537,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                          Kranti Solar
                                        </h3>
                                     </a>
-                                    <a href="https://ks-kranthi.vercel.app/" class="common__icon imgc">
+                                    <a href="https://ks-kranthi.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1165,7 +1559,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Solaric Innovators Pvt. Ltd.
                                        </h3>
                                     </a>
-                                    <a href="https://solaric-innovators-pvt-ltd.vercel.app/" class="common__icon imgc">
+                                    <a href="https://solaric-innovators-pvt-ltd.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1187,7 +1581,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           4URSpace AI Chat Bot
                                        </h3>
                                     </a>
-                                    <a href="https://4-space-ai.vercel.app/" class="common__icon imgc">
+                                    <a href="https://4-space-ai.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1209,7 +1603,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           ABR Safety Nets - Shop
                                        </h3>
                                     </a>
-                                    <a href="https://abrsafetynets.vercel.app/" class="common__icon imgc">
+                                    <a href="https://abrsafetynets.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1231,7 +1625,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Virupaksha Photography Studio
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro6.png" class="common__icon imgc">
+                                    <a href="assets/img/project/pro6.png" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1253,7 +1647,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Istreecare
                                        </h3>
                                     </a>
-                                    <a href="https://istreecare.vercel.app/" class="common__icon imgc">
+                                    <a href="https://istreecare.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1275,7 +1669,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Surana Wires - Shop
                                        </h3>
                                     </a>
-                                    <a href="https://surana.vercel.app/" class="common__icon imgc">
+                                    <a href="https://surana.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1297,7 +1691,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Digital Bussiness Card
                                        </h3>
                                     </a>
-                                    <a href="https://swpl-card.vercel.app/" class="common__icon imgc">
+                                    <a href="https://swpl-card.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1319,7 +1713,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Stanza Soft (HYD)
                                        </h3>
                                     </a>
-                                    <a href="https://stanza-final.vercel.app/" class="common__icon imgc">
+                                    <a href="https://stanza-final.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1341,7 +1735,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Ontrack
                                        </h3>
                                     </a>
-                                    <a href="https://ontrack-project.vercel.app/" class="common__icon imgc">
+                                    <a href="https://ontrack-project.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1363,7 +1757,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Fizzi
                                        </h3>
                                     </a>
-                                    <a href="https://soda-website-cane.vercel.app/" class="common__icon imgc">
+                                    <a href="https://soda-website-cane.vercel.app/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1385,7 +1779,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Rejouice
                                        </h3>
                                     </a>
-                                    <a href="https://rudra267.github.io/rejouice/" class="common__icon imgc">
+                                    <a href="https://rudra267.github.io/rejouice/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1407,7 +1801,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Brand Identity & Motion Design
                                        </h3>
                                     </a>
-                                    <a href="https://rudra267.github.io/Model3_WebsiteDesign/" class="common__icon imgc">
+                                    <a href="https://rudra267.github.io/Model3_WebsiteDesign/" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1429,7 +1823,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Brand Identity & Motion Design
                                        </h3>
                                     </a>
-                                    <a href="https://www.figma.com/proto/pkyofq5KWVLMmnV8xlB4GB/Untitled?node-id=1-2&p=f&t=T2DxiJOpDJr5ZJ2Q-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" class="common__icon imgc">
+                                    <a href="https://www.figma.com/proto/pkyofq5KWVLMmnV8xlB4GB/Untitled?node-id=1-2&p=f&t=T2DxiJOpDJr5ZJ2Q-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1456,7 +1850,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                          Teasty Route
                                        </h3>
                                     </a>
-                                    <a href="https://github.com/Rudra267/MERN-Testy-Route" class="common__icon imgc">
+                                    <a href="https://github.com/Rudra267/MERN-Testy-Route" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1477,7 +1871,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           CozyStay
                                        </h3>
                                     </a>
-                                    <a href="https://github.com/Rudra267/CozyStay" class="common__icon imgc">
+                                    <a href="https://github.com/Rudra267/CozyStay" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1502,7 +1896,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Graphics
                                        </h3>
                                     </a>
-                                    <a class="common__icon imgc">
+                                    <a class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1523,7 +1917,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Graphics
                                        </h3>
                                     </a>
-                                    <a class="common__icon imgc">
+                                    <a class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1544,7 +1938,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Creative Graphics Design
                                        </h3>
                                     </a>
-                                    <a  class="common__icon imgc">
+                                    <a  class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1565,7 +1959,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Creative Graphics Design
                                        </h3>
                                     </a>
-                                    <a  class="common__icon imgc">
+                                    <a  class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1578,7 +1972,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                               <div class="thumb position-relative">
                                  <img src="./images/Graphics/4.png" alt="img" class="rounded">
                                  <div class="content d-flex align-items-center justify-content-between gap-2">
-                                    <a href="protfolio-details.html" class="left__cont">
+                                    <a href="#0" class="left__cont">
                                        <span class="base mb-2 mb-xxl-3 d-block text-uppercase">
                                           Creative Graphic
                                        </span>
@@ -1586,7 +1980,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                            Poster Design
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro5.png" class="common__icon imgc">
+                                    <a href="#0" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1607,7 +2001,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Poster Design
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro2.png" class="common__icon imgc">
+                                    <a href="assets/img/project/pro2.png" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1632,7 +2026,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Mobile Application Development
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro5.png" class="common__icon imgc">
+                                    <a href="assets/img/project/pro5.png" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1653,7 +2047,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                                           Paper & Book Covers Design
                                        </h3>
                                     </a>
-                                    <a href="assets/img/project/pro2.png" class="common__icon imgc">
+                                    <a href="assets/img/project/pro2.png" class="common__icon" target="_blank">
                                        <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                  </div>
@@ -1909,7 +2303,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                   Recent Posts
                </h2>
                <div class="blog__hoverbox">
-                  <a href="blog-details.html" class="hover__circle wow fadeInUp" data-wow-duration="1.6s">
+                  <a href="#prot" class="hover__circle wow fadeInUp" data-wow-duration="1.6s">
                      <span class="box">
                         <i class="bi bi-arrow-up-right"></i>
                         <span class="textmore"> 
@@ -1938,10 +2332,10 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                            </div>
                         </div>
                         <a class="opa__thumb imgc">
-                           <video width="400px" src="./images/1.mp4" autoplay muted loop></video>
+                           <video class="video" src="./images/1.mp4" autoplay muted loop></video>
                         </a>
                      </div>
-                     <a  class="common__icon imgc">
+                     <a  class="common__icon" target="_blank">
                         <i class="bi bi-android"></i>
                      </a>
                   </div>
@@ -1960,10 +2354,10 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                            </div>
                         </div>
                         <a  class="opa__thumb imgc">
-                           <video width="400px" src="./images/2.mp4" autoplay muted loop></video>
+                           <video class="video" src="./images/2.mp4" autoplay muted loop></video>
                         </a>
                      </div>
-                     <a  class="common__icon imgc">
+                     <a  class="common__icon" target="_blank">
                         <i class="bi bi-braces"></i>
                      </a>
                   </div>
@@ -1982,10 +2376,10 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                            </div>
                         </div>
                         <a  class="opa__thumb imgc">
-                          <video width="400px" src="./images/3.mp4" autoplay muted loop></video>
+                          <video class="video" src="./images/3.mp4" autoplay muted loop></video>
                         </a>
                      </div>
-                     <a class="common__icon imgc">
+                     <a class="common__icon" target="_blank">
                         <i class="bi bi-braces"></i>
                      </a>
                   </div>
@@ -2037,31 +2431,26 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                      Quick Link 
                   </h4>
                   <ul class="quick-link">
-                     <li>
-                        <a href="#0" class="pra">
-                           Service
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#0" class="pra">
-                           Project
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#0" class="pra">
-                           Blog
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#0" class="pra">
-                           Faqs
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#0" class="pra">
-                           Contact
-                        </a>
-                     </li>
+               <li>
+                  <a href="#about" class="pra">
+                     About
+                  </a>
+               </li>
+               <li>
+                  <a href="#prot" class="pra">
+                     Work
+                  </a>
+               </li>
+               <li>
+                  <a href="#skills" class="pra">
+                     Skills
+                  </a>
+               </li>
+               <li>
+                  <a href="#Home" class="pra">
+                     Social Links
+                  </a>
+               </li>
                   </ul>
                </div>
             </div>
@@ -2076,33 +2465,31 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
                            <i class="bi bi-geo-alt"></i>
                         </div>
                         <a href="#0" class="cont">
-                           12/54 stest Felo insomesis N/h road Uk
+                           Hyderabad, Telangana
                         </a>
                      </li>
                      <li class="d-flex align-items-center gap-3">
                         <div class="icons">
-                           <i class="bi bi-chat-left-dots"></i>
+                           <i class="bi bi-envelope-at"></i>
                         </div>
                         <div class="box">
-                           <a href="#0" class="cont d-block">
-                              example251@gmail
+                           <a href="#0" class="cont d-block" style="text-transform: lowercase;">
+                             nrudra550@gmail.com
                            </a>
-                           <a href="#0" class="cont">
-                             info251@gmail
+                           <a href="#0" class="cont" style="text-transform: lowercase;">
+                             rudraroul571@gmail.com
                            </a>
                         </div>
                      </li>
                      <li class="d-flex align-items-center gap-3">
                         <div class="icons">
-                           <i class="bi bi-geo-alt"></i>
+                           <i class="bi bi-telephone"></i>
                         </div>
                         <div class="box">
                            <a href="#0" class="cont d-block">
-                              +958 152 4581
+                              +91 9668166656
                            </a>
-                           <a href="#0" class="cont">
-                              +985 548 6548
-                           </a>
+                         
                         </div>
                      </li>
                   </ul>
@@ -2117,7 +2504,7 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+										<input type="text" class="form-control" name="name" id="fname" placeholder="Name">
 									</div>
 								</div>
 								<div class="col-md-12"> 
@@ -2125,18 +2512,22 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
 										<input type="email" class="form-control" name="email" id="email" placeholder="Email">
 									</div>
 								</div>
+                        <div class="col-md-12">
+										<input type="tel" placeholder="Contact Number e.g. +91 9876543210" 
+         pattern="^\+?[0-9\s\-]{10,15}$"  class="form-control" name="phone" id="phone" >
+							   </div>
 								<div class="col-md-12">
 										<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+							   </div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="message" class="form-control" id="textarea" cols="30" rows="4" placeholder="Message"></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<input type="submit" value="Send Message" class="cmn--btn base">
+										<input type="submit" value="Send Message" class="cmn--btn base sendmsg">
 										<div class="submitting"></div>
 									</div>
 								</div>
@@ -2158,6 +2549,14 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
 </footer>
 <!--<< Footer >>-->
 
+  <!-- Modal Structure -->
+  <div id="pdfModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <iframe id="pdfViewer" src=""></iframe>
+    </div>
+  </div>
+
    <!--<< Scroll To Top >>-->
    <div class="progress-wrap">
       <svg
@@ -2171,6 +2570,50 @@ Proficient Full Stack Developer skilled in JavaScript (ES6+), TypeScript, PHP, P
       <i class="bi bi-arrow-90deg-up title topping"></i>
    </div>
    <!--<< Scroll To Top >>-->
+
+<script>
+    function openModal() {
+      const modal = document.getElementById('pdfModal');
+      const pdfViewer = document.getElementById('pdfViewer');
+      pdfViewer.src = './RudranarayanRoul_Fullstack_Developer_2025.pdf'; // Update this path
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('pdfModal');
+      const pdfViewer = document.getElementById('pdfViewer');
+      pdfViewer.src = '';
+      modal.style.display = 'none';
+    }
+
+    // Close modal when clicking outside the content
+    window.onclick = function(event) {
+      const modal = document.getElementById('pdfModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+  
+      <script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent actual form submission
+    sendEmail();
+});
+  (function(){
+   emailjs.init({
+     publicKey: "3yMqeSEBu4os1zbg7",
+   });
+  })();
+ </script>
+
+
+<script src="./assets/js/contact.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
    <!--<< Jquery Latest >>-->
   <script src="assets/js/jquery-3.7.0.min.js"></script>

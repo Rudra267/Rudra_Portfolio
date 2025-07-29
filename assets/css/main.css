@@ -2327,7 +2327,7 @@ p {
 }
 @media (max-width: 575px) {
   .banner__content {
-    padding: 60px 0 60px;
+    padding: 22px 0 60px;
   }
   .banner__content .bn__currently {
     margin-bottom: 28px;
@@ -2399,6 +2399,7 @@ p {
     max-width: 300px;
   }
   .banner__thumb img {
+    margin-top: 5%;
     width: 100%;
   }
 }
@@ -2789,7 +2790,7 @@ p {
 }
 
 .about__v1wrap {
-  padding: 60px 60px;
+  padding: 60px 140px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -3071,13 +3072,37 @@ p {
   }
 }
 
+.exri__item-box{
+  min-width: 140px;
+  /* width: 140px; */
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  gap: 0px !important;
+}
+
 .exri__item {
+  /* width: 100px; */
   display: flex;
+  /* justify-content: center;
+  align-items: center; */
   transition: all 0.6s;
+  /* height: 100px; */
   gap: 24px;
   border: 1px solid var(--cusborder);
   padding: 16px 16px;
   border-radius: 6px;
+}
+
+.expri__cont > h4{
+  margin: 12px;
+  
+  font-size: 15px;
+}
+
+.exri__item > img{
+  margin-left: 10px;
+  width: 50px;
 }
 .exri__item .ex-iconbox {
   min-width: 44px;
@@ -5737,3 +5762,80 @@ p {
     font-size: 1.2rem;
     flex-shrink: 0;
   }
+
+  .play{
+    animation: move-up 10s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes move-up{
+    0%{
+      transform: translateY(0) scale(1);
+    }
+    25%{
+      transform: translateY(-15px) scale(1.02);
+    }
+    /* 50%{
+      transform: translateY(0) scale(1);
+    } */
+    75%{
+      transform: translateY(10px) scale(0.98);
+    }
+    100%{
+      transform: translateY(0) scale(1);
+    }
+   
+  }
+
+  .video{
+    width: 400px;
+  }
+
+  @media (max-width:500px){
+    .video{
+      width: 250px;
+    }
+  }
+
+      /* Modal Background */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    /* Modal Content Box */
+    .modal-content {
+      position: relative;
+      margin: 5% auto;
+      padding: 0;
+      width: 80%;
+      max-width: 800px;
+      background-color: #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
