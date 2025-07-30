@@ -2541,9 +2541,9 @@ p {
     font-size: 14px;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 500px) {
   .banner__rightinfo {
-    display: none;
+    top:63%
   }
 }
 
